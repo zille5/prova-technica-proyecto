@@ -1,0 +1,668 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+
+/* nav bar */
+nav {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    line-height: 90px;
+    padding-inline: 10vw;
+    transition: 0.3s;
+    z-index: 100;
+    
+ 
+  }
+  
+  
+  .nav-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: blue;
+    padding-left: 46rem;
+    
+    
+  }
+  
+  .nav-menu,
+  .nav_menu_list {
+    display: flex;
+  }
+  
+  .nav-menu .nav_list {
+    list-style: none;
+    position: relative;
+    
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 00;
+    padding-inline: 15px;
+    margin-inline: 20px;
+  }
+  
+ 
+
+
+  #clientesnav {
+    display: flex;
+    min-height: 3rem;
+  
+
+}
+ #clientesnav ul li {
+    display: inline;
+    justify-content: center;
+     padding-left: 1rem;
+    padding-right: 1rem;
+} 
+#clientesnav ul {
+    display: flex;
+    justify-content: center;
+}
+
+#clientesnav ul li img {
+  width: 25px;
+  height: 25px;
+  margin-right: 15rem;
+}
+  
+
+  
+  .active-link {
+    position: relative;
+    color: var(--first-color);
+    transition: 0.3s;
+  }
+  
+  .active-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 2px;
+    background: var(--first-color);
+  }
+
+
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+/* home */
+
+
+
+#home{
+    background: linear-gradient(174deg,rgba(19, 129, 176, 1) 36%, rgba(162, 219, 211, 1) 53%, rgba(39, 66, 115, 1) 83%);    
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#home img{
+    clip-path: circle(25%);  
+}
+
+.title{
+    color:whitesmoke;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 6rem;
+    padding-left: 9rem;
+
+   
+   
+}
+
+.tagline{
+    color: white;
+    display: flex;
+   flex-direction: column;
+    font-size: 20px;
+    padding-top: 8rem;
+    padding-left: 9rem;
+
+
+}
+
+/* ------------------------------- */
+
+/* about */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+   
+}
+ .hero{
+   
+    justify-content: column;
+    align-items: center;
+    text-align: center;
+    padding: 10rem 5rem ;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 9%, rgba(87, 199, 133, 1) 72%, rgba(237, 221, 83, 1) 100%);    border-radius: 10px;
+   
+    margin-top: 6rem;
+
+} 
+
+
+h2{
+    font-size: 40px;
+}
+
+.hero-text{
+    font-size: 20px;
+    margin-top: 2rem;
+
+}
+
+.cta-button{
+     display: inline-block;
+     padding: 0.8rem 2rem;
+     background-color: blue;
+     color: white;
+     border-radius: 50px;
+     text-decoration: none;
+     font-weight: 600;
+     margin-top: 2rem;
+     transition: 0.3s ;
+}
+
+.cta-button:hover{
+    background-color: #2080b9;
+    transform: translate(-3px);
+}
+
+/* ------------------------------------------------------ */
+/* comparison */
+.section-title{
+    text-align: center;
+    margin: 4rem 0 2rem;
+    font-size: 2rem;
+    color: black;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #3498db,#2ecc71);
+    border-radius: 2px;
+}
+
+.comparison-card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease
+}
+
+.comparison-card:hover{
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.card-inner{
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.before, .after{
+    flex:1;
+    padding:2rem;
+}
+
+.before{
+    border-radius: 1px solid #e9efec;
+    background-color: #f8f9fa;
+}
+
+.comparison-title{
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-header{
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color:black;
+    padding: 1rem 2rem;
+    font-weight: 600;
+
+}
+
+.comparison-image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+
+.secondary-btn{
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: blue;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: 0.3s ;
+   margin-left: 55rem;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+
+/* Contact Page */
+.contact{
+ background-image: url('images/technology-background-light-lines-and-blur-free-photo.jpg');
+}
+
+.contact-container {
+  display: flex;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  /* background: linear-gradient(135deg, #4b0082, #ffb347, #fff5cc); */
+
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center; /* Changed from positioning */
+  color: white;
+}
+
+
+.contact-form-container {
+  flex: 1.5;
+  padding: 3rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color:white; /* Added color for dark mode */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8749f2; /* Added focus border color */
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+
+.primary-btn{
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: blue;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 2rem;
+  transition: 0.3s ;
+ /* margin-left: 55rem; */
+}
+
+
+.primary-btn:hover{
+  background-color: #2080b9;
+  transform: translate(-3px);
+}
+
+
+/* --------------------------------login---------- */
+/* Container Styling */
+.container2 {
+  background-image: url('images/technology-background-light-lines-and-blur-free-photo.jpg');
+
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.password-container {
+  position: relative;
+  width: 250px;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  width: 100%;
+  padding-right: 35px; /* space for the eye icon */
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.password-container img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  cursor: pointer;
+}
+
+/* Shared form element styles */
+form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="submit"],
+input[type="radio"],
+button {
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* color: white; */
+}
+
+input[type="submit"],
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+ 
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Gender and Hobbies inline layout */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Switcher text */
+.switcher {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.switcher label {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Form toggle visibility */
+.forms > form,
+.forms > .login-form {
+  display: none;
+}
+
+#registerToggle:not(:checked) ~ .forms .login-form {
+  display: block;
+}
+
+#registerToggle:checked ~ .forms #registerForm {
+  display: block;
+}
+
+
+/* -------------------------------- */
+
+/* footer */
+
+footer {
+    background: rgba(42, 123, 155, 1);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+  }
+  .bottom-footer {
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+  }
+  
+ /* Small Devices - Phones (≤768px) */
+@media  (max-width: 788px) {
+.nav-name{
+  margin-right: 2500px;
+padding-right: 6rem;
+text-align: center;
+
+  
+}
+
+  .nav-menu ul li{
+    display: flex;
+   
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    /* margin: 10px 0; */
+    /* padding: 10px; */
+    /* width: 100%; */
+    text-align: center;
+  }
+
+  .nav-menu-btn {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  } 
+
+
+
+
+
+
+  #home{
+    background: linear-gradient(174deg,rgba(19, 129, 176, 1) 36%, rgba(162, 219, 211, 1) 53%, rgba(39, 66, 115, 1) 83%);    
+    height: 700px;
+    flex-direction: column;
+  }
+
+
+#home img{
+  clip-path: circle(20%); 
+  margin-bottom: 28rem; 
+  margin-right:10rem ;
+}
+
+.title{
+  color:whitesmoke;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4rem;
+  padding-left: 9rem;
+
+ 
+ 
+}
+
+.tagline{
+  color: white;
+ flex-direction: column;
+  font-size: 20px;
+  padding-top: 1rem;
+  padding-left: 9rem; 
+
+
+}
+
+  /* Hero section */
+  .hero {
+    padding: 5rem 2rem;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 0.6rem 1.5rem;
+  }
+
+  /* Comparison Section */
+  .card-inner {
+    flex-direction: column;
+  }
+
+  .secondary-btn {
+    margin: 2rem auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Contact Form */
+  .contact-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact-form-container {
+    padding: 2rem 1rem;
+  }
+
+  /* Login
+  .container2 {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .password-container {
+    width: 100%;
+  }
+
+  /* Footer */
+  /* footer {
+    padding: 20px 10px;
+  } */
+
+  /* .bottom-footer {
+    font-size: 16px;
+  } */
+}
+ 
+@media (max-width: 1026px){
+
+  .nav-name{
+    
+  margin-right: 6rem;
+    
+  }
+  #home{
+    background: linear-gradient(174deg,rgba(19, 129, 176, 1) 36%, rgba(162, 219, 211, 1) 53%, rgba(39, 66, 115, 1) 83%);    
+    height: 700px;
+    flex-direction: column;
+  }
+
+
+#home img{
+  clip-path: circle(20%); 
+  margin-bottom: 28rem; 
+  margin-right:10rem ;
+}
+
+.title{
+  color:whitesmoke;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4rem;
+  padding-left: 9rem;
+
+ 
+ 
+}
+
+.tagline{
+  color: white;
+ flex-direction: column;
+  font-size: 20px;
+  padding-top: 1rem;
+  padding-left: 9rem; 
+
+
+}
+}

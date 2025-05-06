@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-       
+        <div class="nav-logo">
             <p class="nav-name">Technologìa</p>
-        
+        </div>
     
        
           
@@ -45,29 +45,43 @@
       </nav>     
         </header>       
    
+ <!-- contact box -->
+ <section class="contact">
+    <h2 class="contact-title">Contacto</h2>
+    <div class="contact-container" id="contact">
     
-    <section id="home">
-        <div>
-        <h1 class="title">Antes y después: Como la technología cambió nuestras vidas</h1>
-        <p class="tagline">Explorando la notable transformación de nuestra vida cotidiana a través de la innovación tecnológica</p>
-    </div>
-    <div>
-        <img src="images/generative-ai.webp" alt="img">
-    </div>
-    </section>
+       <div class="contact-form-container">
+           <form id="contactForm" method="get" >
+               <div class="form-group">
+                   <label for="ph-nombre">Nombre</label>
+                   <input id="ph-nombre" nme="nombre" type="text" placeholder="Su nombre" required>
+               </div>
+               
+               <div class="form-group">
+                   <label for="ph-mail">E-mail</label>
+                   <input id="ph-mail" name="email" type="email" placeholder="Su correo electrónico" required>
+               </div>
+               
+               <div class="form-group">
+                   <label for="ph-tfno">Telephono</label>
+                   <input id="ph-tfno" name="telefono" type="text" placeholder="Su número de teléfono" required>
+               </div>
+                
+               
+               <div class="form-group">
+                   <label for="ph-mensaje">Mensaje</label>
+                   <textarea id="ph-mensaje"  name="mensaje" placeholder="Su mensaje" required></textarea>
+               </div>
+               
+               <button id="btn-enviar" type="submit" class="primary-btn">Enviar</button>
+           </form>
+       </div>
+   </div>
+</section>
 
-    <!-- ----------about -->
-    <section id="about">
-        <div class="container">
-           <div class="hero">
-            <h2>Un viaje a través del impacto de la tecnología</h2>
-           <p class="hero-text">Desde cartas escritas a mano hasta mensajes instantáneos, desde enciclopedias hasta motores de búsqueda,<br>
-             desde teléfonos fijos hasta teléfonos inteligentes, la tecnología ha revolucionado cómo vivimos, trabajamos y nos conectamos.</p>        
-         <a href="comparaciones.html" class="cta-button">Explorar los cambios</a>
-           </div>
-</div>
+<a href="index.html" class="secondary-btn">Back to Home</a>
 
-    </section>
+
     <!-- footer -->
     <footer>
         <div class="bottom-footer">
@@ -76,3 +90,27 @@
      </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

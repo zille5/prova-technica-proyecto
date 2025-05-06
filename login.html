@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav-logo">
+            <p class="nav-name">Technologìa</p>
+        </div>
+    
+       
+          
+            <div class="container">
+                     <nav id="header">
+                         <div class="nav-menu" id="myNavMenu">
+                             <ul class="nav_menu_list">
+                                 <li class="nav_list">
+                                   <a href="index.html" class="nav-link active-link">inicio</a>
+                                 </li>
+                                 
+                                 <li class="nav_list">
+                                    <a href="comparaciones.html" class="nav-link">comparaciones</a>
+                                  </li>
+
+                                  
+                
+                                 <li class="nav_list">
+                                     <a href="contact.html" class="nav-link">contacto</a>
+                                 </li>
+                             </ul>
+                    </div>
+
+                    <div id="clientesnav">
+                        <ul>
+                            <li id="icono-clientes">
+                                <a href="login.html"><img src="images/usuario.png" alt="User Area"></a>                        </li>
+                        </ul>
+                    </div>
+
+ 
+      </nav>     
+        </header>       
+   
+
+    <div class="container2">
+        <input type="checkbox" id="registerToggle" hidden>
+    
+        <div class="forms">
+            <!-- Login Form -->
+            <div class="login-form">
+                <h2>Login</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="contraseña" required />
+                        <img id="togglePassword" src="/images/ojoCerrado1.jpg" alt="Toggle Password" />
+                      </div>
+                    <input type="submit" value="Login">
+                </form>
+                <div class="switcher">
+                    <label for="registerToggle">¿No tienes cuenta? Regístrate aquí.</label>
+                </div>
+            </div>
+    
+            <!-- Register Form -->
+            <form id="registerForm">
+                <!-- Name -->
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" placeholder="nombre" required><br><br>
+            
+                <!-- Email -->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="email" required><br><br>
+            
+                <!-- Password -->
+                <label for="password">contraseña</label><br>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="contraseña" required />
+                    <img id="togglePassword" src="/images/ojoCerrado1.jpg" alt="Toggle Password" />
+                  </div>
+            
+                <!-- Gender (Radio Buttons) -->
+                <label>Género:</label><br>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Hombre</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Mujer</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Otro</label><br><br>
+            
+                <!-- Age -->
+                <label for="age">Edad:</label><br>
+                <input type="number" id="age" name="age" min="0" max="120" required><br><br>
+            
+            
+                <!-- Terms and Conditions -->
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Acepto los términos y condiciones</label><br><br>
+            
+                <button type="submit">Register</button>
+                <div class="switcher">
+                    <label for="registerToggle">back to login</label>
+                </div>
+              </form>
+            </main>
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
