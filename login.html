@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Technologìa</title>
 </head>
 <body>
     <header>
@@ -50,7 +50,7 @@
         <input type="checkbox" id="registerToggle" hidden>
     
         <div class="forms">
-            <!-- Login Form -->
+            <!-- -----------------------Login Form -------------------------------------------------->
             <div class="login-form">
                 <h2>Login</h2>
                 <form>
@@ -67,7 +67,7 @@
                 </div>
             </div>
     
-            <!-- Register Form -->
+            <!------------------------------------------------- Register Form ------------------------------------------->
             <form id="registerForm">
                 <!-- Name -->
                 <label for="name">Nombre:</label><br>
@@ -79,10 +79,10 @@
             
                 <!-- Password -->
                 <label for="password">contraseña</label><br>
-                <div class="password-container">
-                    <input type="password" id="password" placeholder="contraseña" required />
-                    <img id="togglePassword" src="/images/ojoCerrado1.jpg" alt="Toggle Password" />
-                  </div>
+               <input type="password" id="password" placeholder="contraseña" required />
+               <br>
+               <br>
+                    
             
                 <!-- Gender (Radio Buttons) -->
                 <label>Género:</label><br>
@@ -98,7 +98,7 @@
                 <input type="number" id="age" name="age" min="0" max="120" required><br><br>
             
             
-                <!-- Terms and Conditions -->
+                <!-- Terms and Conditions checkbox -->
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">Acepto los términos y condiciones</label><br><br>
             
@@ -109,7 +109,72 @@
               </form>
             </main>
 
-   
+   <script>
+
+    // toggle password visibility
+    const togglePassword= document.getElementById('togglePassword');
+    const passwordInput=document.getElementById('password');
+
+    togglePassword.addEventListener('click', function(){
+        const isPasswordVisible = passwordInput.type === 'text';
+        passwordInput.type = isPasswordVisible ? 'password' : 'text';
+        this.src = isPasswordVisible ? 'images/ojoCerrado1.jpg' : 'images/ojoAbierto1.jpg';
+    });
+
+    // -------------------------------------------------------------------------------------------------//
+
+
+    // Login function//
+    const loginForm = document.querySelector('.login-form form');
+                loginForm.addEventListener('submit', function (event) {
+                  event.preventDefault(); // Prevent default form submission
+              
+                  const email = loginForm.querySelector('input[type="email"]').value;
+                  const password = passwordInput.value;
+              
+                  // Basic mock login validation 
+                  if (email === 'azalfa@gmail.com' && password === '1234') {
+                    alert('Login successful!');
+                  } else {
+                    alert('Invalid email or password.');
+                  }
+                });
+// ---------------------------------------------------------------------------------------------------------------------------//
+
+                // registration form //
+
+     const registerForm = document.getElementById('registerForm');
+
+     registerForm.addEventListener('submit', function (e) {
+     e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  const gender = document.querySelector('input[name="gender"]:checked').value;
+  const age = document.getElementById('age').value;
+  const termsAccepted = document.getElementById('terms').checked;
+
+  if (!termsAccepted) {
+    alert('Please accept the terms and conditions.');
+    return;
+  }
+
+  const user = {
+    name,
+    email,
+    password,
+    gender,
+    age,
+  };
+
+  // Save to localStorage
+  localStorage.setItem('user', JSON.stringify(user));
+  alert('Registration successful!');
+
+  registerForm.reset(); // reset form
+});
+   </script>
 </body>
 </html>
 

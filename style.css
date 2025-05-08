@@ -46,6 +46,19 @@ nav {
     padding-inline: 15px;
     margin-inline: 20px;
   }
+
+
+
+
+  #timenav {
+    min-width: 50%;
+}
+
+.fecha {
+    font-size: 1.2rem;
+    color: black;
+    width: 100%;
+}
   
  
 
@@ -98,7 +111,7 @@ nav {
 /* ------------------------------------------------------------------------------ */
 
 
-/* home */
+/*---------------------------- home-------------------------------------------- */
 
 
 
@@ -185,7 +198,7 @@ h2{
 }
 
 /* ------------------------------------------------------ */
-/* comparison */
+/* ---------------------------------comparison---------------------------------------------------------- */
 .section-title{
     text-align: center;
     margin: 4rem 0 2rem;
@@ -276,7 +289,7 @@ h2{
 /* ----------------------------------------------------------------- */
 
 
-/* Contact Page */
+/* ---------------------------------------Contact Page------------------------------------ */
 .contact{
  background-image: url('images/technology-background-light-lines-and-blur-free-photo.jpg');
 }
@@ -475,7 +488,7 @@ label {
 }
 
 
-/* -------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
 
 /* footer */
 
@@ -492,177 +505,127 @@ footer {
     font-size: 20px;
     color: white;
   }
-  
- /* Small Devices - Phones (≤768px) */
-@media  (max-width: 788px) {
-.nav-name{
-  margin-right: 2500px;
-padding-right: 6rem;
-text-align: center;
 
-  
-}
 
-  .nav-menu ul li{
-    display: flex;
-   
+
+  /* -------------------------------------------------------------------------------------------------- */
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      height: auto;
+      line-height: normal;
+      padding-inline: 5vw;
+      /* align-items: flex-start; */
+      align-items: center;   
+ }
+  
+    .nav-name {
+      padding-left: 14rem;
+      padding-top: 10px;
+      font-size: 24px;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav_menu_list {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .nav-menu .nav_list {
+      margin: 10px 0;
+    }
+  
+    .nav-link {
+      margin: 0;
+      padding: 10px 0;
+      width: 100%;
+    }
+
+
+    #clientesnav ul li img {
+      margin-left: 15rem;
+    }
+  
+  
+    #home {
+      flex-direction: column;
+      height: auto;
+      padding: 2rem 1rem;
+    }
+  
+    .title,
+    .tagline {
+      padding-left: 0;
+      text-align: center;
+    }
+  
+    .tagline {
+      padding-top: 1rem;
+    }
+  
+    #home img {
+      padding-left: 4rem;
+      clip-path: circle(20%);
+    }
   }
 
-  .nav-menu.active {
-    display: flex;
+/* para version de tablet */
+
+@media (max-width: 1086px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    line-height: normal;
+    padding-inline: 5vw;
+  }
+
+  .nav-name {
+    font-size: 24px;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-menu,
+  .nav_menu_list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu .nav_list {
+    margin: 10px 0;
   }
 
   .nav-link {
-    /* margin: 10px 0; */
-    /* padding: 10px; */
-    /* width: 100%; */
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  #timenav {
+    width: 100%;
     text-align: center;
   }
 
-  .nav-menu-btn {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-  } 
-
-
-
-
-
-
-  #home{
-    background: linear-gradient(174deg,rgba(19, 129, 176, 1) 36%, rgba(162, 219, 211, 1) 53%, rgba(39, 66, 115, 1) 83%);    
-    height: 700px;
-    flex-direction: column;
+  .fecha {
+    font-size: 1rem;
   }
 
-
-#home img{
-  clip-path: circle(20%); 
-  margin-bottom: 28rem; 
-  margin-right:10rem ;
-}
-
-.title{
-  color:whitesmoke;
-  font-size: 30px;
-  font-weight: bold;
-  padding-top: 4rem;
-  padding-left: 9rem;
-
- 
- 
-}
-
-.tagline{
-  color: white;
- flex-direction: column;
-  font-size: 20px;
-  padding-top: 1rem;
-  padding-left: 9rem; 
-
-
-}
-
-  /* Hero section */
-  .hero {
-    padding: 5rem 2rem;
+  #clientesnav ul {
+    flex-wrap: wrap;
   }
 
-  h2 {
-    font-size: 30px;
+  #clientesnav ul li {
+    padding: 0.5rem;
   }
 
-  .hero-text {
-    font-size: 18px;
+  #clientesnav ul li img {
+    margin-right: 1rem;
   }
-
-  .cta-button {
-    font-size: 14px;
-    padding: 0.6rem 1.5rem;
-  }
-
-  /* Comparison Section */
-  .card-inner {
-    flex-direction: column;
-  }
-
-  .secondary-btn {
-    margin: 2rem auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Contact Form */
-  .contact-container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .contact-form-container {
-    padding: 2rem 1rem;
-  }
-
-  /* Login
-  .container2 {
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .password-container {
-    width: 100%;
-  }
-
-  /* Footer */
-  /* footer {
-    padding: 20px 10px;
-  } */
-
-  /* .bottom-footer {
-    font-size: 16px;
-  } */
-}
- 
-@media (max-width: 1026px){
-
-  .nav-name{
-    
-  margin-right: 6rem;
-    
-  }
-  #home{
-    background: linear-gradient(174deg,rgba(19, 129, 176, 1) 36%, rgba(162, 219, 211, 1) 53%, rgba(39, 66, 115, 1) 83%);    
-    height: 700px;
-    flex-direction: column;
-  }
-
-
-#home img{
-  clip-path: circle(20%); 
-  margin-bottom: 28rem; 
-  margin-right:10rem ;
-}
-
-.title{
-  color:whitesmoke;
-  font-size: 30px;
-  font-weight: bold;
-  padding-top: 4rem;
-  padding-left: 9rem;
-
- 
- 
-}
-
-.tagline{
-  color: white;
- flex-direction: column;
-  font-size: 20px;
-  padding-top: 1rem;
-  padding-left: 9rem; 
-
-
-}
 }

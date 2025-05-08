@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Technologìa</title>
+    <meta name="description" content="Explora cómo la tecnología ha transformado nuestra vida diaria, desde la comunicación hasta el entretenimiento, comparando el antes y el después de la era digital.">
 </head>
 <body>
     <header>
@@ -41,14 +42,19 @@
                         </ul>
                     </div>
 
- 
+ <!-- date -->
+
+ <div id="timenav">
+    <p id="fecha" class="fecha"></p>
+</div>
+
       </nav>     
         </header>       
    
     
     <section id="home">
         <div>
-        <h1 class="title">Antes y después: Como la technología cambió nuestras vidas</h1>
+        <h1 class="title">Antes y después: Como la technología cambió nuestras vidas.</h1>
         <p class="tagline">Explorando la notable transformación de nuestra vida cotidiana a través de la innovación tecnológica</p>
     </div>
     <div>
@@ -56,7 +62,7 @@
     </div>
     </section>
 
-    <!-- ----------about -->
+    <!-- ------------about --------------------------------------------->
     <section id="about">
         <div class="container">
            <div class="hero">
@@ -74,5 +80,40 @@
             <p>copyright &copy; <a href="#home" style="text-decoration: none;"></a>-All rights reserved 2025</p>
         </div>
      </footer>
+
+
+
+     <script>
+
+//  update the date
+      function fecha() {
+        const fechaElemento = document.getElementById("fecha");
+
+        // date update  in variable
+        const ahora = new Date();
+
+        // Format the date in day, date, month, year
+        const opcionesFecha = {
+          weekday: "long",
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+        };
+        const fechaFormateada = ahora.toLocaleDateString(
+          "es-ES",
+          opcionesFecha
+        );
+        // update the content of elements
+        fechaElemento.textContent =
+          fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
+      }
+
+// Call the function when the page loads
+      fecha();
+    
+
+</script>
+
+
 </body>
 </html>

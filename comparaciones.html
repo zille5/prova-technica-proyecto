@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Technologìa</title>
 </head>
 <body>
     <header>
@@ -41,7 +41,11 @@
                         </ul>
                     </div>
 
- 
+  <!-- fecha -->
+
+  <div id="timenav">
+    <p id="fecha" class="fecha"></p>
+</div>
       </nav>     
         </header>       
    
@@ -50,17 +54,17 @@
 
  <div class="container">
     <h2 class="section-title">Cómo ha cambiado la vida</h2>
-<!-- -------------------------communication -->
+<!-- ----------------------------------------------------------communication -------------------------------------------------------------------------------->
     <div class="comparison-card scroll-trigger">
         <div class="card-header">Comunicación</div>
         <div class="card-inner">
             <div class="before">
-                <img src="images/old-ancient-magic-scrolls-seals-600nw-2508338361.webp" class="comparison-image">
+                <img id="imagen" src="images/old-ancient-magic-scrolls-seals-600nw-2508338361.webp" class="comparison-image">
                 <h3 class="comparison-title">Antes: Días de espera para la conexión</h3>
                 <p>Las cartas escritas a mano tardaban días o semanas en entregarse. Las llamadas de larga distancia eran caras y se planificaban con antelación. Las cabinas telefónicas eran comunes en las esquinas.</p>
             </div>
        <div class="after">
-            <img src="images/Howtechnologychangedcommunication-e1445956766211.jpg" class="comparison-image">
+            <img id="imagen1" src="images/Howtechnologychangedcommunication-e1445956766211.jpg" class="comparison-image">
             <h3 class="comparison-title">Después: Conexión global instantánea</h3>
             <p>Las cartas escritas a mano tardaban días o semanas en entregarse. Las llamadas de larga distancia eran caras y se planificaban con antelación. Las cabinas telefónicas eran comunes en las esquinas.</p>
         </div>
@@ -70,20 +74,20 @@
 
 
 
-<!-- ---------------------Entertainment -->
+<!-- -------------------------------------------------Entertainment ---------------------------------------------------------------------->
 
 <div class="comparison-card scroll-trigger">
     <div class="card-header">Entretenimiento</div>
     <div class="card-inner">
         <div class="before">
-            <img src="images/DALL·E-2024-05-28-00.13.49-A-realistic-and-nostalgic-landscape-image-depicting-various-scenes-from-life-before-the-internet-with-black-people.-Include-a-black-family-gathered-ar.webp" class="comparison-image">
+            <img id="before" src="images/DALL·E-2024-05-28-00.13.49-A-realistic-and-nostalgic-landscape-image-depicting-various-scenes-from-life-before-the-internet-with-black-people.-Include-a-black-family-gathered-ar.webp" class="comparison-image">
             <h3 class="comparison-title">Antes: Opciones limitadas</h3>
             <p>La televisión solo tenía unos pocos canales con programación programada. La música se compraba en álbumes físicos. Las películas se veían en cines o se alquilaban en tiendas.</p>
         </div>
   
 
  <div class="after">
-        <img src="images/freepik_edit_Candid-image-photography-natural-textures-highly-r-1024x701.jpeg" class="comparison-image">
+        <img  id="after" src="images/freepik_edit_Candid-image-photography-natural-textures-highly-r-1024x701.jpeg" class="comparison-image">
         <h3 class="comparison-title">Después: Transmisión ilimitada</h3>
        <p> Miles de programas y películas están disponibles a la carta. Los servicios de streaming de música ofrecen millones de canciones al instante. La realidad virtual crea experiencias inmersivas. </p> </div>
 
@@ -106,6 +110,88 @@
             <p>copyright &copy; <a href="#home" style="text-decoration: none;"></a>-All rights reserved 2025</p>
         </div>
      </footer>
+
+     <script>
+
+        // cambiar los imagenes de communicacìon before
+        let nombre=document.getElementById('imagen')
+        nombre.addEventListener('mouseover', function(){
+            nombre.src='images/old-ancient-magic-scrolls-seals-600nw-2508338361.webp'
+        });
+
+     
+        nombre.addEventListener('mouseout', function(){
+            nombre.src='images/p06mrpng.jpg'
+        });
+
+
+        // after
+
+        let name=document.getElementById('imagen1')
+        name.addEventListener('mouseover', function(){
+            name.src='images/Howtechnologychangedcommunication-e1445956766211.jpg';
+        });
+
+     
+        name.addEventListener('mouseout', function(){
+            name.src='images/Untitled-8.png';
+        });
+
+// -----------------------------------------------------------------------------------------------------------------//
+// cambiar los imagenes de seccion Entertainment
+
+
+ let before=document.getElementById('before')
+        before.addEventListener('mouseover', function(){
+            before.src='images/DALL·E-2024-05-28-00.13.49-A-realistic-and-nostalgic-landscape-image-depicting-various-scenes-from-life-before-the-internet-with-black-people.-Include-a-black-family-gathered-ar.webp'
+        });
+
+     
+        before.addEventListener('mouseout', function(){
+            before.src='images/597e3127-fa94-4356-bb01-2d546d8a1740.jpg';
+        });
+
+
+        // after
+
+        let after=document.getElementById('after')
+        after.addEventListener('mouseover', function(){
+            after.src='images/freepik_edit_Candid-image-photography-natural-textures-highly-r-1024x701.jpeg'
+        });
+
+     
+        after.addEventListener('mouseout', function(){
+            after.src='images/FutureEntertainment_FeatureImage.jpg'
+        });
+
+// ------------------------------------------------------------------------------------------------------//
+
+//  update the date
+function fecha() {
+        const fechaElemento = document.getElementById("fecha");
+
+        // date update  in variable
+        const ahora = new Date();
+
+        // Format the date in day, date, month, year
+        const opcionesFecha = {
+          weekday: "long",
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+        };
+        const fechaFormateada = ahora.toLocaleDateString(
+          "es-ES",
+          opcionesFecha
+        );
+        // update the content of elements
+        fechaElemento.textContent =
+          fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
+      }
+
+// Call the function when the page loads
+      fecha();
+     </script>
 </body>
 </html> -
 
