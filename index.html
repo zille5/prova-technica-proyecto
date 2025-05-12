@@ -80,40 +80,32 @@
             <p>copyright &copy; <a href="#home" style="text-decoration: none;"></a>-All rights reserved 2025</p>
         </div>
      </footer>
-
-
-
      <script>
+        //  update the date
+function fecha() {
+    const fechaElemento = document.getElementById("fecha");
 
-//  update the date
-      function fecha() {
-        const fechaElemento = document.getElementById("fecha");
+    // date update  in variable
+    const ahora = new Date();
 
-        // date update  in variable
-        const ahora = new Date();
-
-        // Format the date in day, date, month, year
-        const opcionesFecha = {
-          weekday: "long",
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        };
-        const fechaFormateada = ahora.toLocaleDateString(
-          "es-ES",
-          opcionesFecha
-        );
-        // update the content of elements
-        fechaElemento.textContent =
-          fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
-      }
+    // Format the date in day, date, month, year
+    const opcionesFecha = {
+      weekday: "long",
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    };
+    const fechaFormateada = ahora.toLocaleDateString(
+      "es-ES",
+      opcionesFecha
+    );
+    // update the content of elements
+    fechaElemento.textContent =
+      fechaFormateada.charAt(0).toUpperCase() + fechaFormateada.slice(1);
+  }
 
 // Call the function when the page loads
-      fecha();
-    
-
-</script>
-
-
+  fecha();
+     </script>
 </body>
 </html>
